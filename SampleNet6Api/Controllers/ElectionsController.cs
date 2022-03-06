@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SampleNet6Api.Model;
 using DC.Core.Database;
-using Newtonsoft.Json;
 
 namespace SampleNet6Api.Controllers
 {
@@ -22,9 +21,9 @@ namespace SampleNet6Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Election>>> GetElections([FromQuery] PaginationParameter pp)
         {
-            PagedList<Election> elections = await PagedList<Election>.ToPageList(_context.Elections , pp);
+            PagedList<Election> elections = await PagedList<Election>.ToPagedList(_context.Elections , pp);
 
-            Response.Headers.Add("dc-pagination", elections.getMetaData());
+            Response.Headers.Add("dc-pagination", elections.GetMetaData());
             return Ok(elections);
         }
 

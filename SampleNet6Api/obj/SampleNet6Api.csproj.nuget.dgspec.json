@@ -49,7 +49,7 @@
           "dependencies": {
             "DC.Core": {
               "target": "Package",
-              "version": "[1.0.7, )"
+              "version": "[1.0.9, )"
             },
             "Microsoft.ApplicationInsights.AspNetCore": {
               "target": "Package",
