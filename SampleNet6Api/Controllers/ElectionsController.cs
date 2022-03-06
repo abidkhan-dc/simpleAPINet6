@@ -1,9 +1,4 @@
 ﻿#nullable disable
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SampleNet6Api.Model;
@@ -27,17 +22,9 @@ namespace SampleNet6Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Election>>> GetElections([FromQuery] PaginationParameter pp)
         {
-            PagedList<Election> elections = await PagedList<Election>.ToPageList(_context.Elections.OrderBy(x => x.Id) , pp);
+            PagedList<Election> elections = await PagedList<Election>.ToPageList(_context.Elections , pp);
 
-            var metaData = new
-            {
-                elections.PageSize,
-                elections.ItemsCount,
-                elections.CurrentPage,
-                elections.HasNext,
-                elections.HasPrevious
-            };
-            Response.Headers.Add("dc-pagination", JsonConvert.SerializeObject(metaData));
+            Response.Headers.Add("dc-pagination", elections.getMetaData());
             return Ok(elections);
         }
 
