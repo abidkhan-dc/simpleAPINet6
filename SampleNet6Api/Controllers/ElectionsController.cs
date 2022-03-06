@@ -37,7 +37,7 @@ namespace SampleNet6Api.Controllers
                 elections.HasNext,
                 elections.HasPrevious
             };
-            Response.Headers.Add("dc-Pagination", JsonConvert.SerializeObject(metaData));
+            Response.Headers.Add("dc-pagination", JsonConvert.SerializeObject(metaData));
             return Ok(elections);
         }
 
