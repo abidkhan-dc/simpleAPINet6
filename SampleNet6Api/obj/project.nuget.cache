@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nzNolFKbCMUk/CInkQPyISWMLePyN8ikHSW4w730/rZbAOIJWkjslrfOzZe+JRgWJ3YccAyUtRy0q8Xm/u4KsQ==",
+  "dgSpecHash": "Z2g9btonYMNnJZdOplUqmbkLJpnFygfY1I0MgVKk+pe3acCU0Wmwy8mcoAQAzT+o28Co2BlWFuuRlzCXHPyl1w==",
   "success": true,
   "projectFilePath": "D:\\code\\sample\\SampleNet6Api\\SampleNet6Api\\SampleNet6Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\akhan\\.nuget\\packages\\dc.core\\1.1.3\\dc.core.1.1.3.nupkg.sha512",
+    "C:\\Users\\akhan\\.nuget\\packages\\dc.core\\1.1.5\\dc.core.1.1.5.nupkg.sha512",
     "C:\\Users\\akhan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\akhan\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\akhan\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
