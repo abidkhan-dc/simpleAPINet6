@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SampleNet6Api.Model;
 using DC.Core.Database;
+using DC.Core.Logger;
 
 namespace SampleNet6Api.Controllers
 {
@@ -12,8 +13,11 @@ namespace SampleNet6Api.Controllers
     {
         private readonly ContextBITS _context;
 
-        public ElectionsController(ContextBITS context)
+        private readonly ILogger<ElectionsController> _logger;
+
+        public ElectionsController(ContextBITS context, ILogger<ElectionsController> lgr)
         {
+            _logger = lgr;
             _context = context;
         }
 
@@ -21,6 +25,7 @@ namespace SampleNet6Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Election>>> GetElections([FromQuery] PaginationParameter pp)
         {
+            LogReporter lr = new LogReporter(_logger, "GetElections");
             PagedList<Election> elections = await PagedList<Election>.ToPagedList(_context.Elections , pp);
 
             Response.Headers.Add("dc-pagination", elections.GetMetaData());
