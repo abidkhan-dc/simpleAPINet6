@@ -5,6 +5,7 @@ using SampleNet6Api.Model;
 using DC.Core.Database;
 using DC.Core.Logger;
 
+
 namespace SampleNet6Api.Controllers
 {
     [Route("api/[controller]")]
@@ -26,10 +27,11 @@ namespace SampleNet6Api.Controllers
         public async Task<ActionResult<IEnumerable<Election>>> GetElections([FromQuery] PaginationParameter pp)
         {
             LogReporter lr = new LogReporter(_logger, "GetElections");
-            _logger.LogInformation("Good class name from logger " + _logger.ToString());
+            lr.entering();
             PagedList<Election> elections = await PagedList<Election>.ToPagedList(_context.Elections , pp);
 
             Response.Headers.Add("dc-pagination", elections.GetMetaData());
+            lr.exiting();
             return Ok(elections);
         }
 
