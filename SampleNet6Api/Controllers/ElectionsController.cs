@@ -27,11 +27,11 @@ namespace SampleNet6Api.Controllers
         public async Task<ActionResult<IEnumerable<Election>>> GetElections([FromQuery] PaginationParameter pp)
         {
             LogReporter lr = new LogReporter(_logger, "GetElections");
-            lr.entering();
+            lr.Entering();
             PagedList<Election> elections = await PagedList<Election>.ToPagedList(_context.Elections , pp);
 
             Response.Headers.Add("dc-pagination", elections.GetMetaData());
-            lr.exiting();
+            lr.Exiting();
             return Ok(elections);
         }
 
