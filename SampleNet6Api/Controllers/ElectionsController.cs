@@ -26,7 +26,7 @@ namespace SampleNet6Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Election>>> GetElections([FromQuery] PaginationParameter pp)
         {
-            LogReporter lr = new LogReporter(_logger, "GetElections");
+            LogReporter lr = new LogReporter(_logger, "Method GetElections");
             lr.Entering();
             PagedList<Election> elections = await PagedList<Election>.ToPagedList(_context.Elections , pp);
 

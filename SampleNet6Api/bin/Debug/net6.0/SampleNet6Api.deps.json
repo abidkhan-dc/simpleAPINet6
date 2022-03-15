@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "SampleNet6Api/1.0.0": {
         "dependencies": {
-          "DC.Core": "1.2.3",
+          "DC.Core": "1.2.5",
           "Microsoft.ApplicationInsights.AspNetCore": "2.19.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
@@ -21,14 +21,14 @@
           "SampleNet6Api.dll": {}
         }
       },
-      "DC.Core/1.2.3": {
+      "DC.Core/1.2.5": {
         "dependencies": {
           "Microsoft.AspNetCore": "2.2.0"
         },
         "runtime": {
           "lib/net6.0/DC.Core.dll": {
-            "assemblyVersion": "1.2.3.0",
-            "fileVersion": "1.2.3.0"
+            "assemblyVersion": "1.2.5.0",
+            "fileVersion": "1.2.5.0"
           }
         }
       },
@@ -2767,12 +2767,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DC.Core/1.2.3": {
+    "DC.Core/1.2.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vdwnT7mrKMcGmaABoRM4o/N57jobBOrdY0eHaiYwz2qvaPtKVkd0Vl54THzbz9n1otOyUvkehxDsW0b3yVETvw==",
-      "path": "dc.core/1.2.3",
-      "hashPath": "dc.core.1.2.3.nupkg.sha512"
+      "sha512": "sha512-qUQBOeEjRR1Y6EQvWHRVLDNbEzFlZygYgRlOGURTBbwAOTX4oetpe3p/mNwa7WAr2jXtF+OHSrVB8Mx6swua4g==",
+      "path": "dc.core/1.2.5",
+      "hashPath": "dc.core.1.2.5.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
